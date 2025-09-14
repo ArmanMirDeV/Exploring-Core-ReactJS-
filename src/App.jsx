@@ -2,31 +2,63 @@
 import './App.css'
 
 function App() {
- 
+
 
   return (
     <>
-     
+
       <h1>React Core Concepts</h1>
       <Student> </Student>
       <Student> </Student>
       <Person></Person>
       <Developer name="Satul Moni" tech="JavaScript"></Developer>
-      <Developer name = "Arman Mir" tech="ReactJS"></Developer>
-      <Developer name = "BongoBolturPola" tech="JaVa"></Developer>
+
+      <Developer name="Arman Mir" tech="ReactJS"></Developer>
+
+      <Developer name="BongoBolturPola" tech="JaVa"></Developer>
+
       <Device device="Phone" model="Samsung F23 5G" brand="Samsung" price="35000$" color="SkyBlue"></Device>
-      <Device  device="Laptop" model="HP VivoBook" brand="HP" price="65000$" color="Black"></Device>
-      <Device  device="SmartWatch" model="XinXI Cobee C1 Pros" brand="Cobee" price="3900$" color="Black"></Device>
-      <Device  device="HeadPhones" model="DX DigitalX" brand="Digital X" price="1550$" color="Whitish Black"></Device>
+
+      <Device device="Laptop" model="HP VivoBook" brand="HP" price="65000$" color="Black"></Device>
+
+      <Device device="SmartWatch" model="XinXI Cobee C1 Pros" brand="Cobee" price="3900$" color="Black"></Device>
+
+      <Device device="HeadPhones" model="DX DigitalX" brand="Digital X" price="1550$" color="Whitish Black"></Device>
+
+    <Player name="TamimBalHasan" runs ="5000"></Player>
+    <Player name="CristianoRonaldo" runs = "75940"></Player>
+
+    <Salami event="Romjaner Eid" amount="20$"></Salami>
+    <Salami event="Graduation" ></Salami>
 
 
-   
-     
     </>
   )
 }
+function Salami({event, amount  = 0}){
+ return(
+   <div className='device'>
+    <p>Salami for: {event}</p>
+    <p>Amount: {amount}  </p>
+  </div>
+ )
+}
 
-function Device (props) {
+
+// const {name, runs} = {name: "TamimBalHasan" , runs: "5000"}
+
+function Player({name, runs}) {
+  return(
+    <div className='student'>
+      <h3>Name: { name}</h3>
+      <p>Runs: {runs} </p>
+
+    </div>
+  )
+}
+// const {name, tech} = {name: "Arman Mir", tech:"ReactJS"}
+
+function Device(props) {
   return (
     <div className='device'>
       <p>Device: {props.device} </p>
@@ -57,9 +89,9 @@ function Developer(props) {
   )
 }
 
-function Person () {
-  const age = 17 ; 
-  const name = " Arman Mir "; 
+function Person() {
+  const age = 17;
+  const name = " Arman Mir ";
   const personStyle = {
     color: 'red',
     textAlign: 'right'
@@ -67,17 +99,17 @@ function Person () {
 
   return (
     <p id='' title='tooltip' style={personStyle} > I am a person{name} {age} </p>
-    
+
   )
 }
 function Pet() {
-  return(
+  return (
     <p>Its a cat</p>
   )
 }
 
 function Data() {
-  return(
+  return (
     <div>
       <h1>This Is Al SAIUL ARMAN MIR, learning ReactJs For the first time with jhonkar Mahbub vai..</h1>
       <p>I am enjoying the reactjs. this is so much interesting. I hope that it will get even more interesting in the upcoming days , hope to work with it for a long time...</p>
@@ -85,8 +117,8 @@ function Data() {
   )
 }
 
-function Sports () {
-  return(
+function Sports() {
+  return (
     <div>
       <h3>
         Cricket
@@ -106,14 +138,14 @@ function Sports () {
 
 
 
-function Student (){
+function Student() {
   return (
     <div className='student'>
       <p>
-        Name: 
+        Name:
       </p>
       <p>
-        Dept: 
+        Dept:
       </p>
     </div>
   )
