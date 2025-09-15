@@ -1,14 +1,50 @@
 
-import './App.css'
-
+import './App.css';
+// import ToDo from './ToDo'
+import Food from './ToDo'
 function App() {
+
+
+
+  const time = 50;
 
 
   return (
     <>
 
       <h1>React Core Concepts</h1>
-      <Student> </Student>
+
+    {/*   <ToDo task=" Learn React"
+        isDone={true}
+        time={time}></ToDo>
+
+      <ToDo task=" Revise JS"
+        isDone={false}></ToDo>
+
+      <ToDo task="Take a Shower"
+        isDone={true}
+        time="100"></ToDo> */}
+
+
+
+      <Food isHungry={true} 
+      food="Biriyani"
+      restaurant="Kacchi vai"
+      ></Food>
+
+      <Food isHungry={false} 
+      food="Biriyani"
+      restaurant="Kacchi vai"
+      ></Food>
+
+      <Food isHungry={true} 
+      food="Burger And Pasta"
+      restaurant="Burger King"
+      ></Food>
+
+
+
+      {/* <Student> </Student>
       <Student> </Student>
       <Person></Person>
       <Developer name="Satul Moni" tech="JavaScript"></Developer>
@@ -29,28 +65,28 @@ function App() {
     <Player name="CristianoRonaldo" runs = "75940"></Player>
 
     <Salami event="Romjaner Eid" amount="20$"></Salami>
-    <Salami event="Graduation" ></Salami>
+    <Salami event="Graduation" ></Salami> */}
 
 
     </>
   )
 }
-function Salami({event, amount  = 0}){
- return(
-   <div className='device'>
-    <p>Salami for: {event}</p>
-    <p>Amount: {amount}  </p>
-  </div>
- )
+function Salami({ event, amount = 0 }) {
+  return (
+    <div className='device'>
+      <p>Salami for: {event}</p>
+      <p>Amount: {amount}  </p>
+    </div>
+  )
 }
 
 
 // const {name, runs} = {name: "TamimBalHasan" , runs: "5000"}
 
-function Player({name, runs}) {
-  return(
+function Player({ name, runs }) {
+  return (
     <div className='student'>
-      <h3>Name: { name}</h3>
+      <h3>Name: {name}</h3>
       <p>Runs: {runs} </p>
 
     </div>
