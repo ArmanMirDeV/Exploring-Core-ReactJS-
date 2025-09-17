@@ -2,11 +2,29 @@
 import './App.css';
 import ToDo from './ToDo'
 // import Food from './ToDo.jsx'
+import Actor from './Actor';
+import Singer from './Singer';
+
+
+
 function App() {
 
+  const actors = ['Robert Downey Jr.', 'Chris Hemsworth', 'Chris Pratt', 'Bappa Raj', 'Omar Sunny', 'Salman Shah', 'Jasim', 'Rajjak', 'Hero Alom'];
+
+  const singers = [
+    { id: 1, name: 'Dr. Mahfuz', age: 68 },
+    { id: 2, name: 'Tahsan Vai', age: 45 },
+    { id: 3, name: 'Shuvro Dev', age: 57 },
+    { id: 4, name: 'Bob Dylan', age: 86 },
+    { id: 5, name: 'Michael Jackson', age: 0 },
+    { id: 6, name: 'Ed Sheeran', age: 40 },
+    { id: 7, name: 'Ariana Grande', age: 35 }
 
 
-  const time = 50;
+  ];
+
+
+  // const time = 50;
 
 
   return (
@@ -14,7 +32,15 @@ function App() {
 
       <h1>React Core Concepts</h1>
 
-      <ToDo task=" Learn React"
+      {
+        singers.map(singer => <Singer key={singer.id} singer={singer} ></Singer>)
+      }
+{/* 
+      {
+        actors.map(actor => <Actor actor={actor}></Actor>)
+      }
+ */}
+      {/* <ToDo task=" Learn React"
         isDone={true}
         time={time}></ToDo>
 
@@ -24,7 +50,7 @@ function App() {
       <ToDo task="Take a Shower"
         isDone={true}
         time="100"></ToDo>
-
+ */}
 
 
       {/* <Food isHungry={true} 
