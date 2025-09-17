@@ -4,6 +4,7 @@ import ToDo from './ToDo'
 // import Food from './ToDo.jsx'
 import Actor from './Actor';
 import Singer from './Singer';
+import Library  from './Library';
 
 
 
@@ -24,6 +25,22 @@ function App() {
   ];
 
 
+  const books = [
+    {id: 1, name: 'Web Programming', price: 250},
+    {id: 2, name: 'DataBase Management System', price: 450},
+    {id: 3, name: 'Physics', price: 400},
+    {id: 4, name: 'Mathematics', price: 230},
+    {id: 5, name: 'History Of Emergence of Bangladesh', price: 2505},
+    {id: 6, name: 'Java Programming Object Oriented', price: 250},
+    {id: 7, name: 'Python Programming', price: 1250},
+    {id: 8, name: 'Discrete Mathematics', price: 2505},
+    {id: 9, name: 'Ethics for Engineers', price: 2560},
+    {id: 10, name: 'Engineering Management', price: 750}
+  ]
+
+
+
+
   // const time = 50;
 
 
@@ -31,6 +48,9 @@ function App() {
     <>
 
       <h1>React Core Concepts</h1>
+
+     <Library books={books} ></Library>
+
 
       {
         singers.map(singer => <Singer key={singer.id} singer={singer} ></Singer>)
